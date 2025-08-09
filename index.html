@@ -109,15 +109,64 @@ footer a {
   font-weight: bold;
 }
 
+.moving-text-section {
+  width: 100%;
+  overflow: hidden;
+  background: #001f3f; /* Dark blue background */
+  padding: 15px 0;
+}
+
+.moving-text {
+  display: inline-block;
+  white-space: nowrap;
+  animation: moveText 8s ease-in-out infinite alternate;
+}
+
+.moving-text span {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #00aaff; /* Techy blue */
+}
+
+@keyframes moveText {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes slideInLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate-left {
+  animation: slideInLeft 40s ease-out forwards;
+}
+
   </style>
 </head><body>
   <header class="animate__animated animate__fadeInDown">
     <h1>WHY WASTE YOUR HARD-EARNED MONEY?</h1>
     <p class="highlight">Denny Tech is offering a 100% FREE smartphone video editing, animating & money making training just for YOU.</p>
-    <a href="https://chat.whatsapp.com/LRmi9234HWdKg5z910ZHYG?mode=ac_t" class="btn animate__animated animate__pulse animate__infinite"><strong>JOIN NOW!!!</strong></a>
+    <a href="https://chat.whatsapp.com/J8Uxa3UmCKP6S0IV45yaXI?mode=ac_t" class="btn animate__animated animate__pulse animate__infinite"><strong>JOIN NOW!!!</strong></a>
   </header>  <section class="section animate__animated animate__fadeInUp">
     <p>Remember, all you need is just your smartphone (Tecno, Redmi, Infinix, iPhone, Samsung, Itel etc)</p>
-  </section>  <section class="iphone-carousel animate__animated animate__zoomIn">
+  </section> 
+  <section class="iphone-carousel animate__animated animate__zoomIn">
+       <section class="moving-text-section">
+  <div class="moving-text">
+    <span>SEE WHAT OUR STUDENTS ARE SAYING BELOW 👇🔥</span>
+  </div>
+</section> <br>
     <div class="iphone"><img src="testimony1.jpg" alt="Testimonial 1"></div>
     <div class="iphone"><img src="testimony2.jpg" alt="Testimonial 2"></div>
     <div class="iphone"><img src="testimony3.jpg" alt="Testimonial 3"></div>
@@ -134,7 +183,7 @@ footer a {
   </section>  <section class="section">
     <h2 class="highlight">DON’T ALLOW THIS PASS YOU BY!</h2>
     <p>DON’T BE LEFT OUT</p>
-    <a href="https://chat.whatsapp.com/LRmi9234HWdKg5z910ZHYG?mode=ac_t" class="btn animate__animated animate__tada"> JOIN THE FREE TRAINING NOW</a>
+    <a href="https://chat.whatsapp.com/J8Uxa3UmCKP6S0IV45yaXI?mode=ac_t" class="btn animate__animated animate__tada"> JOIN THE FREE TRAINING NOW</a>
   </section>  <footer>
     Built with 💙 by <a href="https://deewebdev1.github.io/Jaynex-Tech-/" target="_blank">Jaynex Tech</a>
   </footer>  <script>
