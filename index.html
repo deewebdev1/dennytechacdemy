@@ -41,7 +41,8 @@ h1 {
 }
 
 .btn {
-  background: #1e90ff;
+  background: linear-gradient(45deg, #1e90ff, #ff1493, #00ff99);
+  background-size: 300% 300%;
   color: #fff;
   padding: 15px 30px;
   margin-top: 30px;
@@ -50,15 +51,38 @@ h1 {
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  transition: transform 0.3s;
+  transition: transform 0.3s ease-in-out;
   text-decoration: none;
   display: inline-block;
+  box-shadow: 0 0 20px rgba(30, 144, 255, 0.8);
+  animation: glow 2s infinite alternate, gradientShift 3s infinite;
 }
 
 .btn:hover {
-  transform: scale(1.05);
-  background: #0f73d2;
+  transform: scale(1.08);
+  box-shadow: 0 0 30px rgba(255, 20, 147, 1);
 }
+
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 15px rgba(30, 144, 255, 0.8),
+                0 0 25px rgba(255, 20, 147, 0.6),
+                0 0 35px rgba(0, 255, 153, 0.6);
+  }
+  100% {
+    box-shadow: 0 0 25px rgba(255, 20, 147, 1),
+                0 0 35px rgba(0, 255, 153, 1),
+                0 0 45px rgba(30, 144, 255, 1);
+  }
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+
 
 .counter-section {
   padding: 60px 20px;
